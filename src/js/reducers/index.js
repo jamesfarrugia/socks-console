@@ -13,7 +13,6 @@ const rootReducer = (state = initialState, action) =>
         case LOAD_SESSIONS:
         return {
             ...state, 
-            sessions: [],
             loadingSessions: true
             };
         case ON_SESSIONS_LOADED:
@@ -26,7 +25,6 @@ const rootReducer = (state = initialState, action) =>
         case LOAD_USERS:
         return {
             ...state, 
-            users: [],
             loadingUsers: true,
             usersError: null
             };

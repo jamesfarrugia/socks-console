@@ -1,0 +1,13 @@
+.freq-link
+{
+    cursor: pointer;
+    border-radius: 2px;
+    color: #007bff;
+    padding: 2px 4px;
+}
+
+.freq-link.active
+{
+    background: #007bff;
+    color: #fff;
+}
