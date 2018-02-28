@@ -1,7 +1,13 @@
 import React from "react";
+import { Switch, Route } from 'react-router-dom'
+
 import List from "./List";
 import Form from "./Form";
 import Navbar from "./Navbar";
+
+import HomeView from './views/Home'
+import SessionsView from './views/Sessions'
+
 import "bootstrap/scss/bootstrap.scss"
 import "./theme.scss"
 
@@ -9,16 +15,10 @@ const App = () => (
   <section className="main">
     <Navbar />
     <div className="container">
-      <div className="row mt-5">
-        <div className="col-md-4 offset-md-1">
-          <h2>Articles</h2>
-          <List />
-        </div>
-        <div className="col-md-4 offset-md-1">
-          <h2>Add a new article</h2>
-          <Form />
-        </div>
-      </div>
+    <Switch>
+      <Route exact path='/' component={HomeView}/>
+      <Route path='/sessions' component={SessionsView}/>
+    </Switch>
     </div>
   </section>
 );
