@@ -1,8 +1,6 @@
 import React from "react";
 import { Switch, Route } from 'react-router-dom'
 
-import List from "./List";
-import Form from "./Form";
 import Navbar from "./Navbar";
 
 import HomeView from './views/Home'

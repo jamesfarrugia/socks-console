@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
-import List from "./List";
-import Form from "./Form";
-
 const Navbar = () => (
     <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">SOCKS Console</a>
