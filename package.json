@@ -34,6 +34,9 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "react-router-dom": "^4.2.2"
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "react-router-dom": "^4.2.2",
+    "redux-thunk": "^2.2.0"
   }
 }

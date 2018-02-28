@@ -1,1 +1,7 @@
-export const ADD_ARTICLE = "ADD_ARTICLE";
+export const LOAD_SESSIONS = "LOAD_SESSIONS";
+export const ON_SESSIONS_LOADED = "ON_SESSIONS_LOADED";
+export const ON_SESSIONS_ERROR = "ON_SESSIONS_ERROR";
+
+export const LOAD_USERS = "LOAD_USERS";
+export const ON_USERS_LOADED = "ON_USERS_LOADED";
+export const ON_USERS_ERROR = "ON_USERS_ERROR";

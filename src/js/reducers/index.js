@@ -1,19 +1,49 @@
-import { ADD_ARTICLE } from "../constants/action-types";
+import { LOAD_SESSIONS, ON_SESSIONS_LOADED, ON_SESSIONS_ERROR,
+    LOAD_USERS, ON_USERS_LOADED, ON_USERS_ERROR } from "../constants/action-types";
 
 const initialState = {
-    articles: [],
-    sessions: [{id:123, name:"test"}]
+    sessions: [],
+    loadingSessions: false
 };
 
 const rootReducer = (state = initialState, action) => 
 {
     switch(action.type)
     {
-        case ADD_ARTICLE:
+        case LOAD_SESSIONS:
         return {
             ...state, 
-            articles: [...state.articles, action.payload]
+            sessions: [],
+            loadingSessions: true
             };
+        case ON_SESSIONS_LOADED:
+        return {
+            ...state, 
+            sessions: action.payload,
+            loadingSessions: false
+            };
+
+        case LOAD_USERS:
+        return {
+            ...state, 
+            users: [],
+            loadingUsers: true,
+            usersError: null
+            };
+        case ON_USERS_LOADED:
+        return {
+            ...state, 
+            users: action.payload,
+            loadingUsers: false
+            };
+        case ON_USERS_ERROR:
+        return {
+            ...state, 
+            users: [],
+            loadingUsers: false,
+            usersError: action.payload
+            };
+
         default:
             return state;
     }

@@ -15,6 +15,9 @@ const Navbar = () => (
                 <li className="nav-item">
                     <Link className="nav-link" to='/sessions'>Sessions</Link>
                 </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to='/authentication'>Authentication</Link>
+                </li>
             </ul>
         </div>
     </nav>
